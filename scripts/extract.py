@@ -1,8 +1,10 @@
-import valo_api
+import valo_api, os
 from datetime import datetime, timezone
 from pprint import pprint
+from dotenv import load_dotenv, dotenv_values
 
-API_KEY = "HDEV-4f1a91a3-1953-45e5-aaf3-866947ea3769" # hide with Docker config
+load_dotenv()
+API_KEY = os.getenv("VAL_API_KEY")
 valo_api.set_api_key(API_KEY)
 
 
